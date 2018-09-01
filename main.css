@@ -34,13 +34,6 @@ body {
     align-items: center;
 }
 
-.menu a {
-    color: #122096;
-    text-decoration: none;
-    font-family: headerFont;
-    letter-spacing: 1px;
-}
-
 .menu a:hover {
     color: #b94958;
 }
@@ -50,7 +43,7 @@ body {
     border: none;
     background: transparent;
     outline: none;
-    display: none;
+    display: block;
     position: absolute;
     right: 0;
 }
@@ -591,14 +584,6 @@ body {
 
 /* Mobile setup */
 @media screen and (max-width: 800px) {
-    .menu a {
-        display: none;
-    }
-
-    .menu button {
-        display: block;
-    }
-
     .row1, .row2, .row3, .row4, .row5 {
         display: flex;
         flex-direction: column;
