@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Claire Chen</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="elements/MyLogo2.png" width="40" height="40">
+                </a>
+            </div>
+
+            <div class="menu">
+                <a href="about.html"> About </a>
+    
+                <button class="navicon">
+                    <div id="nav-icon2" onclick="openClose()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="illustration.html"> Illustrations </a>
+                <a href="holzer.html"> Jenny Holzer Exhibition </a>
+                <a href="heyday.html"> Penn Hey Day Design </a>
+                <a href="etonkids.html"> Etonkids Festival Design</a>
+                <a href="graphicDesign.html"> Graphic Design Projects </a>
+            </div>
+        </div>
+
+        <div class="graphics">
+            <div class="graphic AoT">
+                <video muted autoplay loop>
+                    <source src="elements/AoT.mp4" type="video/mp4"/>
+                </video>
+                <img src="elements/AoT.png" alt="AoT" />   
+            </div>
+            <div class="graphic DragonBall">
+                <video muted autoplay loop>
+                    <source src="elements/DragonBall.mp4" type="video/mp4"/>
+                </video>
+                <img src="elements/DragonBall.png" alt="DragonBall" />   
+            </div>
+            <div class="graphic Totoro">
+                <video muted autoplay loop>
+                    <source src="elements/Totoro.mp4" type="video/mp4"/>
+                </video>
+                <img src="elements/Totoro.png" alt="Totoro" />   
+            </div> 
+            <div class="graphic SpongeBob">
+                <video muted autoplay loop>
+                    <source src="elements/SpongeBob.mp4" type="video/mp4"/>
+                </video>
+                <img src="elements/SpongeBob.png" alt="SpongeBob" />   
+            </div>
+            <div class="graphic Chopper">
+                <video muted autoplay loop>
+                    <source src="elements/Chopper.mp4" type="video/mp4"/>
+                </video>
+                <img src="elements/Chopper.png" alt="Chopper" />   
+            </div>
+        </div>
+
+        <div class="content"> 
+            <div class="row1">
+                <a href="illustration.html#project1" class="wolf">
+                    <img class="wolfy" src="elements/wolf.jpg">
+                </a>
+                <a href="illustration.html#project2" class="girl"><img src="elements/girl.jpg"></a>
+                <a href="illustration.html#project3" class="dragon"><img src="elements/dragon.jpg"></a>
+            </div>
+            
+            <div class="row2">
+                <a href="heyday.html" class="penn"><img src="elements/penn.jpg"></a>
+                <a href="graphicDesign.html" class="hahah"><img src="elements/hahah.jpg"></a>
+                <a href="illustration.html#project4" class="albumCover">
+                    <video muted autoplay loop>
+                        <source src="elements/albumVid.mp4" type="video/mp4"/>
+                    </video>
+                </a>
+            </div>
+            
+            <div class="row3">
+                <a href="illustration.html#project5" class="hangman"><img src="elements/hangman.gif"></a>
+                <a href="holzer.html" class="book"><img src="elements/book.jpg"></a>
+                <a href="etonkids.html" class="eton"><img src="elements/eton.jpg"></a>
+            </div>
+            
+            <div class="row4">
+                <a href="illustration.html#project6" class="jesus"><img src="elements/jesus.jpg"></a>
+                <a href="illustration.html#project7" class="fish"><img src="elements/fish.jpg"></a>
+                <a href="illustration.html#project8" class="zack"><img src="elements/zack.jpg"></a>
+            </div>
+            
+            <div class="row5">
+                <a href="illustration.html#project9" class="cake"><img src="elements/cake.jpg"></a>
+                <a href="illustration.html#project10" class="lestranger"><img src="elements/lestranger.jpg"></a>
+            </div>
+        </div>
+
+        <div class="about">
+            <div>
+                About The Artist
+            </div>
+
+            <p>
+                Born in China in 1996 and moved to Los Angeles at the age of eleven, 
+                Claire aspires to explore her multicultural background by means of 
+                digital illustration and design. She is currently an undergraduate
+                student studying Fine Arts, Cognitive Neuroscience, and Computer Science 
+                at the University of Pennsylvania...     &nbsp;
+                <a href="about.html">Read more</a>
+            </p>
+        </div>
+
+        <button class="topButton" onclick="topFunction()">
+            <img src="elements/up.png">
+        </button>
+       
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,648 @@
+/* Page body margin and font size*/
+body {
+    font-size: 20px;
+    margin: 180px 5% 80px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Font for header menu */
+@font-face {
+    font-family: headerFont;
+    src: url('./elements/GTWalsheimBold.woff2');
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url('./elements/GTWalsheimMedium.woff2');
+}
+
+/* Header content */
+.header {  
+    margin: 50px 0%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    color: #122096;
+    text-decoration: none;
+    font-family: headerFont;
+    letter-spacing: 1px;
+}
+
+.menu a:hover {
+    color: #b94958;
+}
+
+/* Button and animation */
+.navicon {
+    border: none;
+    background: transparent;
+    outline: none;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.navicon:hover {
+    transform: skew(-15deg);
+}
+
+#nav-icon2 {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+#nav-icon2 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #122096;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+  
+#nav-icon2 span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 9px 9px 0;
+}
+  
+#nav-icon2 span:nth-child(odd) {
+    left: 0px;
+    border-radius: 9px 0 0 9px;
+}
+  
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+    top: 4px;
+}
+  
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+    top: 12px;
+}
+  
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+    top: 20px;
+}
+  
+#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+#nav-icon2.open span:nth-child(1) {
+    left: 2px;
+    top: 7px;
+}
+  
+#nav-icon2.open span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: 7px;
+}
+  
+#nav-icon2.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+  
+#nav-icon2.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+}
+  
+#nav-icon2.open span:nth-child(5) {
+    left: 2px;
+    top: 16px;
+}
+  
+#nav-icon2.open span:nth-child(6) {
+    left: calc(50% - 2px);
+    top: 16px;
+}
+
+/* Dropdown menu */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 120px;
+    left: 0;
+    background-color: rgb(18,32,150);
+    background-color: rgba(18,32,150, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: headerFont;
+    font-size: 20px;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Videos  */
+.graphics {
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 0% 5%;
+}
+
+.graphic {
+    width: 13%;
+    min-width: 100px;
+}
+
+.graphic video {
+    display: none;
+    width: 100%;
+}
+
+.graphic img {
+    width: 100%;
+}
+
+/* Main page content */
+.content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content img, .content video, .content gif {
+    width: 100%;
+    display: block;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.content a {
+    overflow: hidden;
+}
+
+.content a:hover img, .content a:hover video, .content a:hover gif {
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+
+/* 92% total for each row of 3 */
+/* 12.95px = 1%; Need 43.87px vertically between each image */
+/* Bottom margin of nth row + top margin of n+1th row = 43.87px */
+/* Row 1: 
+    Top margin: 0 0 0
+    Bottom margin: 8.63px 30.92px 5px
+   Row 2:
+    Top margin: 35.24px(2.72%) 12.95px(1%) 38.87px(3%)
+    Bottom margin: 19.54px 5px 23.54px
+   Row 3:
+    Top margin: 24.33px(1.88%) 38.87px(3%) 38.87px(3%)
+    Bottom margin: 26.73px 5px 34.16px
+   Row 4:
+    Top margin: 38.87px(3%) 38.87px(3%) 9.71px(0.75%)
+    Bottom margin: 33.58px 21.78px 5px
+   Row 5:
+    Top margin: 10.29px(0.79%) 0 38.87px(3%)
+    Bottom margin: 5px 0 14.46px
+*/
+
+.wolf {
+    width: 30%;
+}
+
+.girl {
+    width: 36%;
+}
+
+.dragon {
+    width: 26%;
+}
+
+.penn {
+    margin: 2.72% 0 0;
+    width: 43%;
+}
+
+.hahah {
+    margin: 1% 0 0;
+    width: 21%;
+}
+
+.albumCover {
+    margin: 3% 0 0;
+    width: 28%;
+}
+
+.hangman {
+    margin: 1.88% 0 0;
+    width: 21%;
+}
+
+.book {
+    margin: 3% 0 0;
+    width: 37%;
+}
+
+.eton {
+    margin: 3% 0 0;
+    width: 34%;
+}
+
+.jesus {
+    margin: 3% 0 0;
+    width: 29%;
+}
+
+.fish {
+    margin: 3% 0 0;
+    width: 44%;
+}
+
+.zack {
+    margin: 0.75% 0 0;
+    width: 19%;
+}
+
+.cake {
+    margin: 0.79% 0 0;
+    width: 26%;
+}
+
+.lestranger {
+    margin: 3% 0 10%;
+    width: 70%;
+}
+
+/* About footer section */
+.about {
+    color: #122096;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+    line-height: 2;
+    font-size: 20px;
+    background-color: #eee;
+    margin-left: calc(100vw * -0.05);
+    width: 100vw;
+}
+
+.about div {
+    text-align: center;
+    font-family: headerFont;
+    font-size: 23px;
+    padding: 5% 10% 0 10%;
+}
+
+.about p {
+    padding: 0 10% 5% 10%;
+}
+
+.about a, .aboutPage a {
+    color: #b94958;
+}
+
+ /* Back to Top Button */
+.topButton {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.topButton:hover {
+    transform: scale(1.1);
+}
+
+/* Illustration and graphic design page */
+.illustrationsTitle, .etonkidsTitle, .heydayTitle, .graphicDesignTitle, .holzerTitle {
+    text-align: center;
+    color: #122096;
+    font-family: headerFont;
+    margin: 5% 0;
+    font-size: 23px;
+}
+
+.illustrations p, .graphicDesign p, .holzerDesign p {
+    text-align: initial;
+    font-family: 'Playfair Display', serif;
+    color: #122096;
+    margin-top: auto;
+    line-height: 2;
+    font-size: 15px;
+} 
+
+.illustrations span, .graphicDesign span, .holzerDesign span {
+    font-family: titleFont;
+    font-size: 17px;
+}
+
+.project1, .project2, .project3, .project5, .project6, .project7, .project10, .graphicDesign div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8%;
+}
+
+.project8, .project9 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5% 8%;
+}
+
+.project1 img {
+    width: 35%;
+    height: 35%;
+    margin-right: 4%;
+}
+
+.project2 img {
+    width: 50%;
+    height: 50%;
+    margin-left: 4%;
+}
+
+.project3 img, .project9 img, .design3 img {
+    width: 35%;
+    height: 35%;
+    margin-right: 4%;
+}
+
+.project4 {
+    margin: 0 0 8% 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.project4 video, .design4 img {
+    width: 40%;
+    height: 40%;
+    margin-left: 4%;
+}
+
+.project4 img {
+    width: 35%;
+    height: 35%;
+    margin-left: 4%;
+}
+
+.project5 img {
+    width: 60%;
+    height:60%
+}
+
+.project5 p {
+    margin-left: 4%;
+}
+
+.project6 img {
+    width: 50%;
+    height: 50%;
+    margin-left: 4%;
+}
+
+.project7 img {
+    width: 70%;
+    height: 70%;
+    margin-right: 4%;
+}
+
+.project8 img {
+    width: 30%;
+    height: 30%;
+    margin-left: 4%;
+}
+
+.project10 img {
+    width: 80%;
+    height: 80%;
+    margin-left: 4%;
+}
+
+.design1 img {
+    width: 30%;
+    height: 30%;
+    margin-right: 4%;
+}
+
+.design2 img {
+    width: 33%;
+    height: 33%;
+    margin-left: 4%;
+}
+
+/* Etonkids page */
+.etons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.etons img {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 3.39%;
+}
+
+.etonkidsIntro, .heydayIntro, .holzerIntro {
+    font-family: 'Playfair Display', serif;
+    color: #122096;
+    font-size: 15px;
+    line-height: 2;
+    margin: 0 15% 5%;
+}
+
+/* Heyday page */
+.heyday img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+}
+
+/* Holzer page */
+.holzerDesign div {
+    margin-bottom: 10%;
+}
+
+.catalogue div, .spread div, .poster, .promo, .website {
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work1 img {
+    width: 40%;
+    height: 40%;
+    margin-right: 4%;
+}
+
+.work2 img {
+    width: 30%;
+    height: 30%;
+}
+
+.spread img {
+    width: 100%;
+    height: 100%;
+}
+
+.work3 img {
+    width: 80%;
+    height: 80%;
+}
+
+.poster img {
+    width: 80%;
+    height: 80%;
+    margin-right: 4%;
+}
+
+.promo video, .website video {
+    width: 80%;
+    height: 80%;
+    margin-left: 4%;
+}
+
+.website video {
+    margin-right: 4%;
+}
+
+/* About page */
+.aboutPage {
+    display: flex;
+    justify-content: space-between;
+    color: #122096;
+    line-height: 2;
+}
+
+.aboutPage span {
+    font-family: headerFont;
+    font-size: 23px;
+}
+
+.aboutPage img {
+    width: 30%;
+    height: 30%;
+    margin-right: 4%;
+}
+
+.aboutPage a {
+    font-family: titleFont;
+    font-size: 17px;
+}
+
+.mobile1, .mobile2, .mobile3 {
+    display: none;
+}
+
+/* Mobile setup */
+@media screen and (max-width: 800px) {
+    .menu a {
+        display: none;
+    }
+
+    .menu button {
+        display: block;
+    }
+
+    .row1, .row2, .row3, .row4, .row5 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row1 a, .row2 a, .row3 a, .row4 a, .row5 a {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .graphics {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .illustrations div, .graphicDesign div, .holzerDesign div {
+        display: none;
+    }
+
+    .mobile1, .mobile2, .mobile3 {
+        color: #122096;
+        display: block;
+        line-height: 2;
+        font-size: 15px;
+        margin-bottom: 10%;
+    }
+
+    .mobile1 img, .mobile1 video, .mobile2 img, .mobile3 img, .mobile3 video {
+        width: 100%;
+    }
+
+    .mobile1 span, .mobile2 span, .mobile3 span {
+        font-size: 17px;
+        font-family: titleFont;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+
