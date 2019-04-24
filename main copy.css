@@ -1,0 +1,631 @@
+/* Page body margin and font size*/
+body {
+    font-size: 20px;
+    margin: 150px 5% 3%;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Font for header menu */
+@font-face {
+    font-family: headerFont;
+    src: url('./elements/GTWalsheimBold.woff2');
+}
+
+@font-face {
+    font-family: titleFont;
+    src: url('./elements/GTWalsheimMedium.woff2');
+}
+
+/* Header content */
+.header {  
+    margin: 50px 0%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a:hover {
+    color: #b94958;
+}
+
+/* Button and animation */
+.navicon {
+    border: none;
+    background: transparent;
+    outline: none;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+.navicon:hover {
+    transform: skew(-15deg);
+}
+
+#nav-icon2 {
+    width: 26px;
+    height: 26px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+#nav-icon2 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #122096;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+  
+#nav-icon2 span:nth-child(even) {
+    left: 50%;
+    border-radius: 0 9px 9px 0;
+}
+  
+#nav-icon2 span:nth-child(odd) {
+    left: 0px;
+    border-radius: 9px 0 0 9px;
+}
+  
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+    top: 4px;
+}
+  
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+    top: 12px;
+}
+  
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+    top: 20px;
+}
+  
+#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+#nav-icon2.open span:nth-child(1) {
+    left: 2px;
+    top: 7px;
+}
+  
+#nav-icon2.open span:nth-child(2) {
+    left: calc(50% - 2px);
+    top: 7px;
+}
+  
+#nav-icon2.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+}
+  
+#nav-icon2.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+}
+  
+#nav-icon2.open span:nth-child(5) {
+    left: 2px;
+    top: 16px;
+}
+  
+#nav-icon2.open span:nth-child(6) {
+    left: calc(50% - 2px);
+    top: 16px;
+}
+
+/* Dropdown menu */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 120px;
+    left: 0;
+    background-color: rgb(18,32,150);
+    background-color: rgba(18,32,150, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: headerFont;
+    font-size: 20px;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Videos  */
+.graphics {
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 0 3%;
+} 
+
+.graphic {
+    width: 13%;
+    min-width: 100px;
+}
+
+.graphic video {
+    display: none;
+    width: 100%;
+}
+
+.graphic img {
+    width: 100%;
+}
+
+/* Main page content */
+
+.row1 {
+    margin-right: 20%;
+    margin-left: 3%;
+    margin-bottom: -7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row2 {
+    display: flex;
+    margin-bottom: -7%;
+    justify-content: center;
+}
+
+.row3 {
+    margin-left: 20%;
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content img {
+    width: 100%;
+    display: block;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.middle{
+    transition: 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content a {
+    overflow: hidden;
+}
+
+.content a:hover img {
+    transform: scale(1.3);
+    /* filter: brightness(50%); */
+    opacity: 0.2;
+}
+
+.content a:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: #0b1861;
+    font-size: 40px;
+    font-family: headerFont;
+}
+
+.T, .I, .C, .A {
+    position: relative;
+    width: 25%;
+}
+
+.G {
+    position: relative;
+    width: 18%;
+}
+
+/* Footer */
+.insta {
+    display: flex;
+    justify-content: center;
+}
+
+.insta img {
+    width: 5%;
+    height: 5%;
+}
+
+/* Illustration, graphic design, and conceptual art page */
+
+/* titles */
+.illustrationsTitle, .graphicDesignTitle, .conceptualArtTitle {
+    text-align: center;
+    color: #122096;
+    font-family: headerFont;
+    margin: 5% 0;
+    font-size: 23px;
+}
+
+/* text */
+.graphicDesign p, .conceptualArt p {
+    text-align: initial;
+    font-family: 'Playfair Display', serif;
+    color: #122096;
+    margin-top: auto;
+    line-height: 2;
+    font-size: 15px;
+} 
+
+/* subtitle */
+.graphicDesign span, .conceptualArt span {
+    font-family: titleFont;
+    font-size: 17px;
+}
+
+/* each row */
+.graphicDesign div, .conceptualArt div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8%;
+}
+
+/* illustrations imgs */
+
+.first, .second, .third, .fourth, .fifth, .sixth {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.illustrations img, .illustrations video, .illustrations gif {
+    width: 100%;
+    display: block;
+}
+
+.wolf {
+    width: 28%;
+}
+
+.animals {
+    width: 28%;
+}
+
+.girl {
+    width: 35%;
+}
+
+.albumCover, .piggy, .love1 {
+    width: 30%;
+}
+
+.jesus, .cake, .love2 {
+    width: 30%;
+}
+
+.dragon {
+    width: 32%;
+}
+
+.rebel {
+    width: 30%;
+}
+
+.zack {
+    width: 26%;
+}
+
+.hateful {
+    width: 28%;
+}
+
+.fish {
+    width: 53%;
+}
+
+.stranger {
+    width: 80%;
+}
+
+/* graphic design page */
+
+
+
+/* concept art imgs */
+/* Margin is either 2 or 4%; Title right = margin-right */
+
+.final {
+    width: 50%;
+    height: 50%;
+    margin-right: 4%;
+}
+
+.final2 {
+    width: 30%;
+    height: 20%;  
+    margin-right: 2%;
+}
+
+.mhe {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.claire1 {
+    width: 30%;
+    height: 30%;
+    margin-left: 4%;
+}
+
+.claire2 {
+    width: 50%;
+    height: 50%;
+    margin-left: 2%;
+}
+
+.islandimg {
+    width: 50%;
+    height: 50%;
+    margin-right: 4%;
+}
+
+.islandgif {
+    width: 40%;
+    height: 40%;
+    margin-right: 2%;
+}
+
+.missing img {
+    width: 30%;
+    height: 30%;
+}
+
+.missing2 img {
+    width: 90%;
+    height: 90%;
+}
+
+.chinatown img {
+    width: 20%;
+    height: 20%;
+    margin-right: 2%;
+}
+
+.hsh img {
+    width: 40%;
+    height: 40%;
+    margin-left: 4%;
+}
+
+.wings img {
+    width: 30%;
+    height: 30%;
+    margin-right: 4%;
+}
+
+/* Etonkids page */
+.etons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.etons img {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 3.39%;
+}
+
+.etonkidsIntro, .heydayIntro, .holzerIntro {
+    font-family: 'Playfair Display', serif;
+    color: #122096;
+    font-size: 15px;
+    line-height: 2;
+    margin: 0 15% 5%;
+}
+
+/* Heyday page */
+.heyday img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+}
+
+/* Holzer page */
+.holzerDesign div {
+    margin-bottom: 10%;
+}
+
+.catalogue div, .spread div, .poster, .promo, .website {
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work1 img {
+    width: 40%;
+    height: 40%;
+    margin-right: 4%;
+}
+
+.work2 img {
+    width: 30%;
+    height: 30%;
+}
+
+.spread img {
+    width: 100%;
+    height: 100%;
+}
+
+.work3 img {
+    width: 80%;
+    height: 80%;
+}
+
+.poster img {
+    width: 80%;
+    height: 80%;
+    margin-right: 4%;
+}
+
+.promo video, .website video {
+    width: 80%;
+    height: 80%;
+    margin-left: 4%;
+}
+
+.website video {
+    margin-right: 4%;
+}
+
+/* About page */
+.aboutPage {
+    display: flex;
+    justify-content: space-between;
+    color: #122096;
+    line-height: 2;
+}
+
+.aboutPage span {
+    font-family: headerFont;
+    font-size: 23px;
+}
+
+.aboutPage img {
+    width: 30%;
+    height: 30%;
+    margin-right: 4%;
+}
+
+.aboutPage p {
+    font-size: 15px;
+}
+
+
+.aboutPage a {
+    font-family: titleFont;
+    font-size: 15px;
+}
+
+.mobile1, .mobile2, .mobile3 {
+    display: none;
+}
+
+/* Mobile setup */
+@media screen and (max-width: 800px) {
+    /* main */
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 0;
+    }
+
+    .row1 a, .row3 a {
+        width: 100%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .row2 a {
+        width: 40%;
+    }
+
+    .graphics {
+        visibility: hidden;
+        height: 0;
+    }
+
+    /* concept art, illustrations */
+    .mobile2 img {
+        margin: 0;
+    }
+
+    .illustrations div, .graphicDesign div, .holzerDesign div, .conceptualArt div {
+        display: none;
+    }
+
+    .mobile1, .mobile2, .mobile3 {
+        color: #122096;
+        display: block;
+        line-height: 2;
+        font-size: 15px;
+        margin-bottom: 10%;
+    }
+
+    .mobile1 img, .mobile1 video, .mobile2 img, .mobile3 img, .mobile3 video {
+        width: 100%;
+    }
+
+    .mobile1 span, .mobile2 span, .mobile3 span {
+        font-size: 17px;
+        font-family: titleFont;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+

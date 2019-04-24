@@ -1,7 +1,7 @@
 /* Page body margin and font size*/
 body {
     font-size: 20px;
-    margin: 180px 5% 80px;
+    margin: 150px 5% 3%;
     font-family: 'Playfair Display', serif;
 }
 
@@ -189,8 +189,8 @@ body {
 .graphics {
     display: flex;
     justify-content: space-between;
-    margin: 0% 0% 5%;
-}
+    margin: 10% 0 3%;
+} 
 
 .graphic {
     width: 13%;
@@ -207,13 +207,29 @@ body {
 }
 
 /* Main page content */
-.content div {
+
+.row1 {
+    margin-right: 20%;
+    margin-left: 3%;
+    margin-bottom: -7%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
-.content img, .content video, .content gif {
+.row2 {
+    display: flex;
+    margin-bottom: -7%;
+    justify-content: center;
+}
+
+.row3 {
+    margin-left: 20%;
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content img {
     width: 100%;
     display: block;
     -moz-transition: all 0.3s;
@@ -221,146 +237,62 @@ body {
     transition: all 0.3s;
 }
 
+.middle{
+    transition: 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .content a {
     overflow: hidden;
 }
 
-.content a:hover img, .content a:hover video, .content a:hover gif {
-    transform: scale(1.1);
-    filter: brightness(50%);
+.content a:hover img {
+    transform: scale(1.3);
+    /* filter: brightness(50%); */
+    opacity: 0.2;
 }
 
-/* 92% total for each row of 3 */
-/* 12.95px = 1%; Need 43.87px vertically between each image */
-/* Bottom margin of nth row + top margin of n+1th row = 43.87px */
-/* Row 1: 
-    Top margin: 0 0 0
-    Bottom margin: 8.63px 30.92px 5px
-   Row 2:
-    Top margin: 35.24px(2.72%) 12.95px(1%) 38.87px(3%)
-    Bottom margin: 19.54px 5px 23.54px
-   Row 3:
-    Top margin: 24.33px(1.88%) 38.87px(3%) 38.87px(3%)
-    Bottom margin: 26.73px 5px 34.16px
-   Row 4:
-    Top margin: 38.87px(3%) 38.87px(3%) 9.71px(0.75%)
-    Bottom margin: 33.58px 21.78px 5px
-   Row 5:
-    Top margin: 10.29px(0.79%) 0 38.87px(3%)
-    Bottom margin: 5px 0 14.46px
-*/
-
-.wolf {
-    width: 30%;
+.content a:hover .middle {
+    opacity: 1;
 }
 
-.girl {
-    width: 36%;
-}
-
-.dragon {
-    width: 26%;
-}
-
-.penn {
-    margin: 2.72% 0 0;
-    width: 43%;
-}
-
-.hahah {
-    margin: 1% 0 0;
-    width: 21%;
-}
-
-.albumCover {
-    margin: 3% 0 0;
-    width: 28%;
-}
-
-.hangman {
-    margin: 1.88% 0 0;
-    width: 21%;
-}
-
-.book {
-    margin: 3% 0 0;
-    width: 37%;
-}
-
-.eton {
-    margin: 3% 0 0;
-    width: 34%;
-}
-
-.jesus {
-    margin: 3% 0 0;
-    width: 29%;
-}
-
-.fish {
-    margin: 3% 0 0;
-    width: 44%;
-}
-
-.zack {
-    margin: 0.75% 0 0;
-    width: 19%;
-}
-
-.cake {
-    margin: 0.79% 0 0;
-    width: 26%;
-}
-
-.lestranger {
-    margin: 3% 0 10%;
-    width: 70%;
-}
-
-/* About footer section */
-.about {
-    color: #122096;
-    text-align: justify;
-    font-family: 'Playfair Display', serif;
-    line-height: 2;
-    font-size: 20px;
-    background-color: #eee;
-    margin-left: calc(100vw * -0.05);
-    width: 100vw;
-}
-
-.about div {
-    text-align: center;
+.text {
+    color: #0b1861;
+    font-size: 40px;
     font-family: headerFont;
-    font-size: 23px;
-    padding: 5% 10% 0 10%;
 }
 
-.about p {
-    padding: 0 10% 5% 10%;
+.T, .I, .C, .A {
+    position: relative;
+    width: 25%;
 }
 
-.about a, .aboutPage a {
-    color: #b94958;
+.G {
+    position: relative;
+    width: 18%;
 }
 
- /* Back to Top Button */
-.topButton {
-    border: none;
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+/* Footer */
+.insta {
+    display: flex;
+    justify-content: center;
 }
 
-.topButton:hover {
-    transform: scale(1.1);
+.insta img {
+    width: 5%;
+    height: 5%;
 }
 
-/* Illustration and graphic design page */
-.illustrationsTitle, .etonkidsTitle, .heydayTitle, .graphicDesignTitle, .holzerTitle {
+/* Illustration, graphic design, and conceptual art page */
+
+/* titles */
+.illustrationsTitle, .graphicDesignTitle, .conceptualArtTitle {
     text-align: center;
     color: #122096;
     font-family: headerFont;
@@ -368,7 +300,8 @@ body {
     font-size: 23px;
 }
 
-.illustrations p, .graphicDesign p, .holzerDesign p {
+/* text */
+.graphicDesign p, .conceptualArt p, .holzerDesign p {
     text-align: initial;
     font-family: 'Playfair Display', serif;
     color: #122096;
@@ -377,136 +310,188 @@ body {
     font-size: 15px;
 } 
 
-.illustrations span, .graphicDesign span, .holzerDesign span {
+/* subtitle */
+.graphicDesign span, .conceptualArt span, .holzerDesign span {
     font-family: titleFont;
     font-size: 17px;
 }
 
-.project1, .project2, .project3, .project5, .project6, .project7, .project10, .graphicDesign div {
+/* each row */
+.graphicDesign div, .conceptualArt div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8%;
 }
 
-.project8, .project9 {
+/* illustrations imgs */
+
+.first, .second, .third, .fourth, .fifth, .sixth {
     display: flex;
-    justify-content: space-between;
-    margin: 0 5% 8%;
+    justify-content: space-around;
+    margin-bottom: 3%;
 }
 
-.project1 img {
+.illustrations img, .illustrations video, .illustrations gif {
+    width: 100%;
+    display: block;
+}
+
+.wolf {
+    width: 28%;
+}
+
+.animals {
+    width: 28%;
+}
+
+.girl {
     width: 35%;
-    height: 35%;
-    margin-right: 4%;
 }
 
-.project2 img {
+.albumCover, .piggy, .love1 {
+    width: 30%;
+}
+
+.jesus, .cake, .love2 {
+    width: 30%;
+}
+
+.dragon {
+    width: 32%;
+}
+
+.rebel {
+    width: 30%;
+}
+
+.zack {
+    width: 26%;
+}
+
+.hateful {
+    width: 28%;
+}
+
+.fish {
+    width: 53%;
+}
+
+.stranger {
+    width: 80%;
+}
+
+/* graphic design page */
+.perch1 {
+    width: 42%;
+    height: 42%;
+}
+
+.perch2 {
+    width: 38%;
+    height: 38%;
+}
+
+.tairis1 {
+    width: 40%;
+    height: 40%;
+}
+
+.tairis2 {
+    width: 30%;
+    height: 30%;
+}
+
+.yes img {
+    width: 20%;
+    height: 20%;
+}
+
+.penn1 {
     width: 50%;
     height: 50%;
-    margin-left: 4%;
 }
 
-.project3 img, .project9 img, .design3 img {
-    width: 35%;
-    height: 35%;
-    margin-right: 4%;
+.penn2 {
+    width: 25%;
+    height: 25%;
 }
 
-.project4 {
-    margin: 0 0 8% 0;
+.heyday1 {
+    width: 45%;
+    height: 45%;
+}
+
+.heyday2 {
+    width: 40%;
+    height: 40%;
+}
+
+/* concept art imgs */
+/* Margin is either 2 or 4%; Title right = margin-right */
+
+.final {
+    width: 45%;
+    height: 45%;
+}
+
+.final2 {
+    width: 30%;
+    height: 20%;  
+}
+
+.mhe {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 }
 
-.project4 video, .design4 img {
-    width: 40%;
-    height: 40%;
-    margin-left: 4%;
-}
-
-.project4 img {
+.claire1 {
     width: 35%;
     height: 35%;
-    margin-left: 4%;
 }
 
-.project5 img {
-    width: 60%;
-    height:60%
-}
-
-.project5 p {
-    margin-left: 4%;
-}
-
-.project6 img {
+.claire2 {
     width: 50%;
     height: 50%;
-    margin-left: 4%;
 }
 
-.project7 img {
-    width: 70%;
-    height: 70%;
-    margin-right: 4%;
+.islandimg {
+    width: 50%;
+    height: 50%;
 }
 
-.project8 img {
+.islandgif {
+    width: 40%;
+    height: 40%;
+}
+
+.missing img {
     width: 30%;
     height: 30%;
-    margin-left: 4%;
 }
 
-.project10 img {
-    width: 80%;
-    height: 80%;
-    margin-left: 4%;
+.missing2 img {
+    width: 90%;
+    height: 90%;
 }
 
-.design1 img {
+.chinatown img {
+    width: 20%;
+    height: 20%;
+}
+
+.hsh img {
+    width: 40%;
+    height: 40%;
+}
+
+.wings img {
     width: 30%;
     height: 30%;
-    margin-right: 4%;
 }
 
-.design2 img {
-    width: 33%;
-    height: 33%;
-    margin-left: 4%;
-}
 
-/* Etonkids page */
-.etons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.etons img {
-    width: 70%;
-    height: 70%;
-    margin-bottom: 3.39%;
-}
-
-.etonkidsIntro, .heydayIntro, .holzerIntro {
-    font-family: 'Playfair Display', serif;
-    color: #122096;
-    font-size: 15px;
-    line-height: 2;
-    margin: 0 15% 5%;
-}
-
-/* Heyday page */
-.heyday img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 70%;
-}
-
-/* Holzer page */
+/* Holzer section */
 .holzerDesign div {
     margin-bottom: 10%;
 }
@@ -573,9 +558,14 @@ body {
     margin-right: 4%;
 }
 
+.aboutPage p {
+    font-size: 15px;
+}
+
+
 .aboutPage a {
     font-family: titleFont;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .mobile1, .mobile2, .mobile3 {
@@ -584,14 +574,21 @@ body {
 
 /* Mobile setup */
 @media screen and (max-width: 800px) {
-    .row1, .row2, .row3, .row4, .row5 {
+    /* main */
+    .content {
         display: flex;
         flex-direction: column;
+        margin: 0 0 0 0;
     }
 
-    .row1 a, .row2 a, .row3 a, .row4 a, .row5 a {
+    .row1 a, .row3 a {
         width: 100%;
-        margin: 5px 0;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .row2 a {
+        width: 40%;
     }
 
     .graphics {
@@ -599,7 +596,12 @@ body {
         height: 0;
     }
 
-    .illustrations div, .graphicDesign div, .holzerDesign div {
+    /* concept art, illustrations */
+    .mobile2 img {
+        margin: 0;
+    }
+
+    .illustrations div, .graphicDesign div, .holzerDesign div, .conceptualArt div {
         display: none;
     }
 
