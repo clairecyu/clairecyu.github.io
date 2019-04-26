@@ -324,6 +324,11 @@ body {
     margin-bottom: 2%;
 }
 
+/* shadow */
+.graphicDesign img, .conceptualArt img, .illustrations img, .holzerDesign img, .holzerDesign video {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+}
+
 /* illustrations imgs */
 /* divs */
 .first, .second, .third, .fourth, .fifth, .sixth {
@@ -536,7 +541,6 @@ body {
     height: 70%;
 }
 
-
 /* About page */
 .aboutPage {
     display: flex;
@@ -613,6 +617,7 @@ body {
 
     .mobile1 img, .mobile1 video, .mobile2 img, .mobile3 img, .mobile3 video {
         width: 100%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
     }
 
     .mobile1 span, .mobile2 span, .mobile3 span {
