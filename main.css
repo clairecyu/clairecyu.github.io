@@ -303,9 +303,10 @@ body {
 /* text */
 .graphicDesign p, .conceptualArt p, .holzerDesign p {
     text-align: initial;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
     color: #122096;
     margin-top: auto;
+    margin-bottom: 3%;
     line-height: 2;
     font-size: 15px;
 } 
@@ -320,11 +321,11 @@ body {
 .graphicDesign div, .conceptualArt div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8%;
+    margin-bottom: 2%;
 }
 
 /* illustrations imgs */
-
+/* divs */
 .first, .second, .third, .fourth, .fifth, .sixth {
     display: flex;
     justify-content: space-around;
@@ -382,72 +383,72 @@ body {
 
 /* graphic design page */
 .perch1 {
-    width: 42%;
-    height: 42%;
-}
-
-.perch2 {
-    width: 38%;
-    height: 38%;
-}
-
-.tairis1 {
-    width: 40%;
-    height: 40%;
-}
-
-.tairis2 {
-    width: 30%;
-    height: 30%;
-}
-
-.yes img {
-    width: 20%;
-    height: 20%;
-}
-
-.penn1 {
     width: 50%;
     height: 50%;
 }
 
-.penn2 {
-    width: 25%;
-    height: 25%;
-}
-
-.heyday1 {
+.perch2 {
     width: 45%;
     height: 45%;
 }
 
+.tairis1 {
+    width: 50%;
+    height: 50%;
+}
+
+.tairis2 {
+    width: 45%;
+    height: 45%;
+}
+
+.yes img {
+    width: 23%;
+    height: 23%;
+}
+
+.penn1 {
+    width: 60%;
+    height: 60%;
+}
+
+.penn2 {
+    width: 35%;
+    height: 35%;
+}
+
+.heyday1 {
+    width: 50%;
+    height: 50%;
+}
+
 .heyday2 {
-    width: 40%;
-    height: 40%;
+    width: 45%;
+    height: 45%;
 }
 
 /* concept art imgs */
 /* Margin is either 2 or 4%; Title right = margin-right */
 
 .final {
-    width: 45%;
-    height: 45%;
+    width: 55%;
+    height: 55%;
 }
 
 .final2 {
-    width: 35%;
-    height: 35%;  
+    width: 40%;
+    height: 40%;  
 }
 
-.mhe {
+/* .mhe {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-}
+} */
 
 .claire1 {
-    width: 35%;
-    height: 35%;
+    width: 45%;
+    height: 45%;
 }
 
 .claire2 {
@@ -461,46 +462,47 @@ body {
 }
 
 .islandgif {
-    width: 40%;
-    height: 40%;
+    width: 45%;
+    height: 45%;
 }
 
 .missing img {
-    width: 30%;
-    height: 30%;
+    width: 31%;
+    height: 31%;
 }
 
 .missing2 img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 .chinatown img {
-    width: 20%;
-    height: 20%;
+    width: 23%;
+    height: 23%;
 }
 
 .hsh img {
-    width: 40%;
-    height: 40%;
+    width: 47%;
+    height: 47%;
 }
 
 .wings img {
-    width: 30%;
-    height: 30%;
+    width: 47%;
+    height: 47%;
 }
 
 
 /* Holzer section */
 .holzerDesign div {
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
 
-.catalogue div, .spread div, .poster, .promo, .website {
-    margin-bottom: 4%;
+.catalogue div, .poster, .promo, .website {
+    margin-bottom: 2%;
     display: flex;
     justify-content: space-between;
 }
+
 
 .work1 img {
     width: 40%;
@@ -524,20 +526,16 @@ body {
 }
 
 .poster img {
-    width: 80%;
-    height: 80%;
-    margin-right: 4%;
+    width: 100%;
+    height: 100%;
 }
 
 .promo video, .website video {
-    width: 80%;
-    height: 80%;
-    margin-left: 4%;
+    margin: 0 17%;
+    width: 70%;
+    height: 70%;
 }
 
-.website video {
-    margin-right: 4%;
-}
 
 /* About page */
 .aboutPage {
@@ -601,7 +599,7 @@ body {
         margin: 0;
     }
 
-    .illustrations div, .graphicDesign div, .holzerDesign div, .conceptualArt div {
+    .illustrations div, .graphicDesign div, .holzerDesign div, .conceptualArt div, .conceptualArt p, .graphicDesign p, .holzerDesign p {
         display: none;
     }
 
